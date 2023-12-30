@@ -35,6 +35,15 @@ class ProductManager {
         }
     }
 
+    getProductById(id = null) {
+        if (products[id] === undefined) {
+            console.log(`No existe un producto con el codigo ${id}`);
+            return '';
+        } else {
+            return products[id];
+        }
+    }
+
 
 }
 
