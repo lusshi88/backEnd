@@ -13,17 +13,17 @@ class ProductManager {
         }
 
 
-        let thisItem = {}
+        let item = {}
 
-        thisItem.id = this.autoId
-        thisItem.title = title;
-        thisItem.description = description;
-        thisItem.price = price;
-        thisItem.thumbnail = thumbnail;
-        thisItem.stock = stock;
-        thisItem.code = code;
+        item.id = this.autoId
+        item.title = title;
+        item.description = description;
+        item.price = price;
+        item.thumbnail = thumbnail;
+        item.stock = stock;
+        item.code = code;
 
-        products[this.autoId] = thisItem;
+        products[this.autoId] = item;
     }
 
     getProducts() {
@@ -52,3 +52,7 @@ peugeot206.addProduct("peugeot 206", "3 puertas,color rojo", 400000, "peugeot206
 
 const fiatUno = new ProductManager();
 peugeot206.addProduct("fiat uno", "4 puertas,color azul", 200000, "fiatuno.jpg", 10, "fiat1234")
+
+const LosProductos = new ProductManager();
+// console.log(LosProductos.getProducts());
+console.log(LosProductos.getProductById(1));
